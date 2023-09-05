@@ -1,13 +1,5 @@
 <?php
-
-function collatzNumber($number) {
-    if ($number % 2 == 0) {
-        return $number / 2;
-    }
-    else {
-        return ($number * 3) + 1;
-    }
-}
+include "../serv/function.php";
 
 $longest = 0;
 $longestNumber = 0;
@@ -26,4 +18,4 @@ for ($i=1; $i < 1000000; $i++) {
     }
 }
 
-echo $longestNumber . "\n";
+echo $longestNumber;
