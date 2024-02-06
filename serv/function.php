@@ -53,3 +53,17 @@ function sumName($name) {
 
   return $val;
 }
+
+// Function to calculate the sum of proper divisors of a number
+function sumOfDivisors($n) {
+  $sum = 1; // 1 is always a divisor
+  for ($i = 2; $i * $i <= $n; $i++) {
+      if ($n % $i == 0) {
+          $sum += $i;
+          if ($i * $i != $n) {
+              $sum += $n / $i;
+          }
+      }
+  }
+  return $sum;
+}
