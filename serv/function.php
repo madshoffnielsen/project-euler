@@ -13,7 +13,6 @@ function checkprime($num) {
   return true;
 }
 
-
 function collatzNumber($number) {
   if ($number % 2 == 0) {
       return $number / 2;
@@ -29,6 +28,18 @@ function factorial($n) {
   } else {
       return $n * factorial($n - 1);
   }
+}
+
+// Function to check if a number is palindromic
+function isPalindrome($number) {
+  $numberStr = strval($number);
+  return $numberStr === strrev($numberStr);
+}
+
+// Function to check if a number is palindromic in base 2
+function isBinaryPalindrome($number) {
+  $binaryStr = decbin($number);
+  return isPalindrome($binaryStr);
 }
 
 function sumName($name) {
